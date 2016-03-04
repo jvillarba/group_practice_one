@@ -10,8 +10,10 @@ var dbURL       = 'mongodb://localhost/myappdatabase'
 
 var User        = require('./models/User.js')
 var Post        = require('./models/Post.js')
-var api        = require('./routes/api.js')
-var index        = require('./routes/index.js')
+var api         = require('./routes/api.js')
+var index       = require('./routes/index.js')
+
+//var router      = express.Router();
 
 //////////////////////// CONNECT TO THE DATABASE//////////////////////////
 mongoose.connect(dbURL, function(err) {
@@ -29,8 +31,8 @@ var port = process.env.PORT || 3000;        // set our port
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/api', router)
-app.use('/index', router)
+app.use('/api', apiRouter)
+app.use('/index', indexRouter)
 
 // START THE SERVER
 // =============================================================================
