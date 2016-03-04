@@ -7,3 +7,40 @@ router.use(function(req, res, next){
 router.get('/', function(req, res){
   res.json({message: 'Yay, welcome to our API!'})
 })
+
+router.route('/users')
+
+.post(function(req, res){
+  var user = new User()
+  user.name = req.body.name
+
+  user.save(function(err){
+    if (err)
+      res.send(err)
+      res.json({message: 'User created!'})
+  })
+})
+router.route('/users')
+
+.get(function(req, res){
+  User.find(function(err, users){
+    if (err)
+      res.send(err)
+      res.json({users})
+  })
+})
+router.route('/users/:user_id')
+
+.get(function(req, res){
+  User.findById(req.params.user_id, function(err, user){
+    if (err)
+      res.send(err)
+    res.json(user)
+  })
+})
+
+
+
+
+
+// app.use('/api', router)
