@@ -5,7 +5,7 @@ var Schema = mongoose.Schema
 var postSchema = new Schema({
   title: String,
   content: String,
-  _by: {type: mongoose.Schema.Types.ObjectId, ref: 'Post'}
+  _by: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })
 
 // create a model using Schema
