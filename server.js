@@ -18,7 +18,8 @@ var apiRouter   = require('./routes/api.js')
 mongoose.connect(dbURL, function(err) {
     if(err) throw err
     // inform the user that the connection was successful
-    console.log("connected to: ", dbURL))
+    console.log("connected to: ", dbURL)
+})
 
 // configure app to use bodyParser() and logger
 // this will let us get the data from a POST
