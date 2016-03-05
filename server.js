@@ -30,8 +30,11 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 3000;        // set our port
 
 // REGISTER OUR ROUTES -------------------------------
+app.get('/',function (req,res) {
+  res.send('welcome home! try users.')
+})
 // all of our routes will be prefixed with /api
-app.use('/api', apiRouter)
+app.use('/users', apiRouter)
 //app.use('/index', indexRouter)
 
 // START THE SERVER
