@@ -63,14 +63,8 @@ router.route('/users/:user_id')
     if (err)
       res.send(err)
     res.json({message: 'Successfully deleted'})
-  }
+    })
   })
 })
 
-
-
-
 module.exports = router
-
-
-// app.use('/api', router)
