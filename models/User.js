@@ -5,8 +5,7 @@ var Schema = mongoose.Schema
 // create a Schema
 var userSchema = new Schema({
   name: String,
-  username: {type: String, required: true, unique: true},
-  password: {type: String, required: true},
+  username: {type: String, required: false, unique: false},
   admin: Boolean,
   location: String,
   meta: {
