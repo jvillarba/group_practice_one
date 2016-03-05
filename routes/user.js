@@ -66,6 +66,5 @@ router.route('/users/:user_id')
     res.json({message: 'Successfully deleted'})
     })
   })
-})
 
 module.exports = router
