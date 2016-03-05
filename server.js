@@ -10,8 +10,8 @@ var dbURL       = 'mongodb://localhost/myappdatabase'
 
 var User        = require('./models/User.js')
 var Post        = require('./models/Post.js')
-var apiRouter   = require('./routes/api.js')
-//var indexRouter = require('./routes/index.js')
+var apiRouter   = require('./routes/user.js')
+//var indexRouter = require('./routes/post.js')
 
 
 //////////////////////// CONNECT TO THE DATABASE//////////////////////////
