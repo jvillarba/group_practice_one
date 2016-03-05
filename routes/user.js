@@ -1,3 +1,5 @@
+///// users routes /////////////
+var express = require('express')
 var router = express.Router()
 
 router.use(function(req, res, next){
@@ -63,13 +65,7 @@ router.route('/users/:user_id')
     if (err)
       res.send(err)
     res.json({message: 'Successfully deleted'})
-  }
+    })
   })
-})
-
-
-
 
 module.exports = router
-
-// app.use('/api', router)
